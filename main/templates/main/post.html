@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block static-files %}
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/category.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/post.css' %}">
+{% endblock static-files %}
+
+{% block content %}
+<div class="navigation-links">
+    {% for i in cats %}
+        {% if i.pk == cat_selected %}
+            <h6>{{i.name}}</h6>
+        {% else %}
+            <a href="{{ i.get_absolute_url }}">{{ i.name }}</a>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<div class="container">
+    <div class="pic">
+        {% if posts.photo %}
+            <img src="{{posts.photo.url}}" style="height:490px; width:420px;">
+        {% endif %}
+    </div>
+    <div class="desc">
+        <h1>{{posts.breed}}</h1>
+        <p>{{posts.content}}</p>
+    </div>
+</div>
+
+
+{% endblock content %}

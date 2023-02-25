@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    margin-bottom: 150px;
+}
+
+
+
+.pic {
+    margin-left: 150px;
+    margin-top: 80px;
+
+    border: 1px solid #ADADAD;
+}
+
+.pic img {
+    display: block;
+
+    margin: 10px;
+}
+
+.desc {
+    margin-top: 90px;
+    margin-left: 50px;
+
+}
+
+.desc h1 {
+
+
+    text-align: center;
+
+    width: 100%;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.desc p {
+
+    padding: 20px;
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 25px;
+}

@@ -1,0 +1,129 @@
+body {
+    background: white;
+    font-family: 'Raleway', sans-serif;
+}
+.header {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-line {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 200px;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.navigation-item {
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    margin-right: 50px;
+
+}
+.navigation:hover {
+    background-color: #696969;
+    transformation: 0.6s;
+
+}
+
+.main-navigation {
+    margin-left: 299px;
+}
+
+.location {
+    position: absolute;
+    margin-left: 1157px;
+}
+
+.description {
+    display: flex;
+    position: absolute;
+}
+
+.titl {
+    margin-left: 200px;
+    margin-top: 32px;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.pic {
+    position: relative;
+    display: flex;
+}
+.sq {
+    margin-left:200px;
+}
+
+
+.tr {
+    position: absolute;
+    margin-left: 253px;
+    margin-top: 19px;
+}
+
+.pk1, .pk2, .back-blur {
+    position: absolute;
+}
+
+.pk1 {
+    margin-top: 262px;
+    margin-left: 126px;
+}
+
+.pk2 {
+    margin-top: 61px;
+    margin-left: 540px;
+}
+
+.back-blur {
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 120px;
+}
+
+.entry {
+    position: absolute;
+    margin-top: 299px;
+    margin-left: 200px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.pic {
+    margin-left: 30px;
+}
+
+.entry-description {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 337px;
+    margin-left: 200px;
+}
+
+.btn {
+  transition-duration: 0.6s;
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 450px;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid;
+}
+
+.btn:hover {
+  background-color: #696969; /* Green */
+  color: white;
+  button-decoration: none;
+}
+
+

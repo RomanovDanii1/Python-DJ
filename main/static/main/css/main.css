@@ -1,0 +1,285 @@
+body {
+    background-image: linear-gradient(120.7deg, #FFCB65 -0.48%, #FE8B04 71.13%);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.entry {
+    display: flex;
+    margin-left: 100px;
+    position: relative;
+}
+
+.entry-title {
+    margin-top: 100px;
+    font-size: 60px;
+    font-weight: 900;
+    color: #000000;
+}
+
+.entry-desc {
+    margin-top: 40px;
+    font-size: 25px;
+    font-weight: 400;
+
+}
+
+.btn {
+    transition: 0.6s;
+    margin-top: 63px;
+    background: linear-gradient(92.94deg, #FF3737 39.2%, rgba(255, 55, 55, 0.61) 99.34%);
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+.btn:hover {
+      background-color: #000000;
+}
+
+
+.entry-pic {
+        bottom: 1px;
+        right: 60px;
+        position: absolute;
+}
+
+.entry-pic-bg {
+        margin-top: 20px;
+        margin-left: 550px;
+        position: absolute;
+}
+
+.for-bg {
+    margin-top:635px;
+}
+
+
+.choose-title {
+    padding-top: 5px;
+    padding-left: 227px;
+
+    font-size: 45px;
+    font-weight: 700;
+    color: rgba(255, 169, 50, 1);
+}
+
+.form-to-choose {
+    background-image: url(../img/card-holder-bg.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-holder {
+    margin-top: 15px;
+    margin-left: 162px;
+}
+
+.main-cards {
+    display: flex;
+}
+
+.main-card {
+    display: flex;
+    border-radius: 20px;
+    background: rgba(254, 240, 214, 1);
+    margin-right: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+.main-card:hover,
+.card:hover {
+  background: rgba(238, 209, 115, 1);
+  transform: scale(1.05);
+}
+
+
+.main-card-pic {
+    margin-left: 20px;
+}
+
+
+.card-link-dogs,
+.card-link-cats {
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 420px;
+
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.card-link-dogs {
+    color: rgba(222, 120, 1, 1);
+}
+
+.card-link-cats {
+    color: rgba(112, 111, 109, 1);
+}
+
+.cards {
+    margin-top: 60px;
+    display: flex;
+}
+
+.card {
+
+    border: none;
+    border-radius: 15px;
+    background: rgba(254, 240, 214, 1);
+    margin-right: 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.card-link-parrots,
+.card-link-fishes,
+.card-link-hamsters,
+.card-link-reptiles,
+.card-link-spiders {
+    position: absolute;
+    font-size: 25px;
+    font-weight: 900;
+
+    margin-left: 16px;
+    margin-top: 10px;
+}
+
+.card-link-parrots {
+  color: #496D9E;
+}
+
+.card-link-parrots:hover {
+  color: #294b6d;
+}
+
+.card-link-fishes {
+  color: #FF6F2F;
+}
+
+.card-link-fishes:hover {
+  color: #cc4d1f;
+}
+
+.card-link-hamsters {
+  color: #B9AF8C;
+}
+
+.card-link-hamsters:hover {
+  color: #9d8a68;
+}
+
+.card-link-reptiles {
+  color: #96CF1F;
+}
+
+.card-link-reptiles:hover {
+  color: #6e9d17;
+}
+
+.card-link-spiders {
+  color: #B841A5;
+}
+
+.card-link-spiders:hover {
+  color: #8e2773;
+}
+
+.card-pic-bg {
+    position: absolute;
+    margin-left: 45px;
+    margin-top: 30px;
+}
+
+.card-pic-parrots {
+    margin-left: 100px;
+    margin-top: 50px;
+    position: absolute;
+}
+
+.card-pic-fishes {
+    margin-top: 60px;
+    margin-left: 45px;
+    position: absolute;
+}
+
+.card-pic-hamsters {
+    margin-top: 55px;
+    margin-left: 40px;
+    position: absolute;
+}
+
+.card-pic-reptiles {
+    margin-top: 55px;
+    margin-left: 55px;
+    position: absolute;
+}
+
+.card-pic-spiders {
+    margin-top: 35px;
+    margin-left: 35px;
+    position: absolute;
+}
+
+.middle {
+    display: flex;
+    margin-top: 30px;
+    padding-left: 140px;
+}
+
+.middle-info {
+    display: block;
+}
+
+.middle-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.middle-desc {
+    margin-top: 70px;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.middle-pic-bg {
+    position: absolute;
+    margin-left: 550px;
+}
+
+.middle-pic {
+    position: absolute;
+    margin-left: 505px;
+}
+
+.under-middle {
+    margin-top: 180px;
+    background: #fff;
+    padding-left: 130px;
+    display: flex;
+    height: 40vh;
+}
+
+.info-card {
+    margin-top: 10px;
+    display: block;
+    margin-right: 130px;
+}
+
+.info-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-card p {
+    font-size 25px;
+    font-weight: 500;
+    margin-top: 25px;
+    text-align: center;
+}

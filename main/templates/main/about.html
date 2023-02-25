@@ -1,0 +1,102 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block static-files %}
+    <link rel="stylesheet" href="{% static 'main/css/about.css' %}">
+{% endblock static-files %}
+
+{% block content %}
+<div class="entry-text">
+    “HAPPY PET” - найбільша роздрібна мережа <br> зоомагазинів
+</div>
+<div class="entry">
+    <div class="entry-block">
+        <div class="entry-info">
+            <h1>З любов'ю до вихованців</h1>
+            <p>Більше 25 років ми дбаємо про повноцінне життя <br>
+                вихованців, щоб їхнє життя було здоровим, довгим,<br>
+                радісним і гармонійним. Наш обов'язок <br>
+                – створювати кращу пропозицію, підтримуючи вас та <br>
+                ваших домашніх улюбленців.</p>
+        </div>
+        <div class="entry-pic">
+            <img src="{% static 'main/img/about/entry-pic.png' %}" alt="">
+        </div>
+    </div>
+</div>
+<div class="middle-text">
+    Зручний сервіс
+</div>
+
+<div class="cards">
+    <div class="card">
+        <div class="card-title">
+            <img class="card-img" src="{% static 'main/img/about/card-1.png' %}" style="width:40px; height:40px;">
+            <h1>ШВИДКИЙ ЗАМОВЛЕННЯ<br>
+                БЕЗ РЕЄСТРАЦІЇ</h1>
+        </div>
+        <div class="card-desc">
+            <p>Оформляйте замовлення, де<br>
+                і коли вам зручно. Більше не<br>
+                потрібно витрачати час на<br>
+                проходження всіх етапів у<br>
+                кошику. Повторити<br>
+                замовлення стало ще<br>
+                простіше із сервісом<br>
+                Передплата на доставку!</p>
+            <button type="btn" class="btn" style="width:85%; height:40px;">Замовити ></button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-title">
+            <img src="{% static 'main/img/about/card-2.png' %}" style="width:40px; height:40px;">
+            <h1>ШВИДКА ДОСТАВКА <br>
+                ДОДОМУ АБО В ОФІС</h1>
+        </div>
+                <div class="card-desc">
+            <p>Зручні умови доставки<br>
+                дозволять отримати<br>
+                замовлення в необхідний<br>
+                час і місце. Вибирайте<br>
+                товари, а ми доставимо їх<br>
+                безкоштовно сьогодні. Як<br>
+                отримати безкоштовну<br>
+                доставку?</p>
+            <button type="btn" class="btn" style="width:85%; height:40px;">Дізнатись умови ></button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-title">
+            <img src="{% static 'main/img/about/card-3.png' %}" style="width:40px; height:40px;">
+            <h1>САМОВИВІЗ З БУДЬ<br>
+                -ЯКОГО МАГАЗИНУ</h1>
+        </div>
+                <div class="card-desc">
+            <p>Вибирайте товари на сайті<br>
+                або в додатку та забирайте у<br>
+                зручний для вас час у будь-<br>
+                якому з магазинів «Чотири<br>
+                Лапи». Вже через 30 хвилин<br>
+                зібране та упаковане<br>
+                замовлення чекатиме на вас<br>
+                у магазині.</p>
+            <button type="btn" class="btn" style="width:85%; height:40px;">Забрати замовленя ></button>
+        </div>
+    </div>
+</div>
+
+<div class="under-middle">
+    <div class="bonus">
+        <img src="{% static 'main/img/about/bonus-pic-1.png' %}">
+        <h6>100 <br> BONUS</h6>
+        <img class="equal" src="{% static 'main/img/about/bonus-equals.png' %}" style="width:50px; height:40px;">
+        <img class="euro" src="{% static 'main/img/about/bonus-pic-2.png' %}" style="width:226px; height:226px; ">
+        <h5>Бонуси за кожну покупку!</h5>
+    </div>
+    <div class="bonus-desc">
+        Бонусна програма дозволить усім дбайливим господарям отримати<br>
+        додаткові переваги для догляду за своїм улюбленцем. Робіть замовлення, <br>
+        накопичуйте бонуси та оплачуйте до 90% наступних покупок.
+    </div>
+</div>
+{% endblock content %}

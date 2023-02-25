@@ -1,0 +1,82 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block static-files %}
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/how_buy.css' %}">
+{% endblock static-files %}
+
+{% block content %}
+<div class="header">
+    <div class="header-title">
+       <h1>Оформлення замовлення</h1>
+    </div>
+    <div class="header-info">
+        Ви можете скористатися будь-яким із запропонованих способів оформлення замовлення.<br>
+        Для нас важливо, щоб кожен покупець відчував комфорт та зручність при здійсненні покупок.
+    </div>
+</div>
+<div class="blocks">
+    <div class="first-block">
+        <div class="first-block-info">
+            <h1>На сайті</h1>
+            <ul>
+                <li>Зручні можливості сайту</li>
+                <li>1. Пошук із використанням фільтрів.</li>
+                <li>2. Зімовлення в один клік.</li>
+                <li>3. Можливість підписки на доставку.</li>
+                <li>4. Пошук по бренду або вихованцю.</li>
+            </ul>
+        </div>
+        <div class="first-block-pic">
+            <img src="{% static 'main/img/how_buy/first-block.png' %}">
+        </div>
+    </div>
+    <div class="second-block">
+        <div class="second-block-pic">
+            <img src="{% static 'main/img/how_buy/second-block.png' %}">
+        </div>
+        <div class="second-block-info">
+            <h1>За телефоном</h1>
+            <ul>
+                <li>1. Швидке замовлення за телефоном</li>
+                <li>2. Допомога у підборі необхідного товару</li>
+                <li>3. Оператор оформить замовлення за вас</li>
+                <li>4. Не потрібна авторизація/реєстрація</li>
+                <li>5. Оформлення замовлення за кілька хвилин</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="middle-cards">
+    <div class="card">
+        <img src="{% static 'main/img/how_buy/card-1.png' %}" style="width:110px; height:110px;">
+        <p>1, Покладіть <br>уподобаний товар <br>у кошик</p>
+    </div>
+    <div class="card">
+        <img src="{% static 'main/img/how_buy/card-2.png' %}" style="width:170px; height:110px;">
+        <p>2. Оберіть ваше та<br> ми запропонуємо <br>способи доставки</p>
+    </div>
+    <div class="card">
+        <img src="{% static 'main/img/how_buy/card-3.png' %}" style="width:110px; height:110px;">
+        <p>3. Виберіть <br> зручний спосіб <br> оплати</p>
+    </div>
+    <div class="card">
+        <img src="{% static 'main/img/how_buy/card-4.png' %}" style="width:150px; height:110px;">
+        <p>4. Отримайте товар <br>спосообом, якй ви <br>обрали </p>
+    </div>
+</div>
+
+<div class="under-middle">
+    <div class="under-middle-title">
+        <h1>Як отримати замовлення?</h1>
+    </div>
+    <div class="under-middle-pic">
+        <img src="{% static 'main/img/how_buy/under-middle-pic-1.png' %}" alt="">
+        <img src="{% static 'main/img/how_buy/under-middle-pic-2.png' %}" alt="">
+        <img src="{% static 'main/img/how_buy/under-middle-pic-3.png' %}" alt="">
+
+    </div>
+</div>
+{% endblock content %}

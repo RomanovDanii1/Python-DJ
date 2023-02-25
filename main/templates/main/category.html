@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block static-files %}
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/category.css' %}">
+{% endblock static-files %}
+
+{% block content %}
+<div class="navigation-links">
+    {% for i in cats %}
+        {% if i.pk == cat_selected %}
+            <h6>{{i.name}}</h6>
+        {% else %}
+            <a href="{{ i.get_absolute_url }}">{{ i.name }}</a>
+        {% endif %}
+    {% endfor %}
+</div>
+<div class="main">
+    <div class="counter-posts">
+
+    </div>
+    <div class="filter">
+
+    </div>
+    <div class="card-holder">
+      {% for el in posts %}
+        <div class="card">
+          <img src="{{el.photo.url}}" alt="{{el.breed}}" />
+          <div class="card-details">
+            <a href="{{el.get_absolute_url}}" class="breed">{{el.breed}}</a>
+            <p class="price">{{el.price}} UAH</p>
+            <button type="button">Add to Cart</button>
+          </div>
+        </div>
+        {% if forloop.counter|divisibleby:"4" %}
+          <div class="clear"></div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+</div>
+{% endblock content %}

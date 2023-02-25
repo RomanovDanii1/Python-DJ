@@ -1,0 +1,141 @@
+
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 150vh;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.header-title h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.header-info {
+    margin-top: 25px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.blocks {
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.first-block,
+.second-block {
+    display: flex;
+    height: 45vh;
+    background: linear-gradient(263.64deg, #FCCA80 47.84%, rgba(255, 167, 3, 0.4) 75.91%);
+    border-radius: 168.5px;
+}
+
+.first-block {
+    margin-top: 70px;
+}
+
+.first-block-info {
+    margin-left: 261px;
+}
+
+.first-block-info h1 {
+    padding-top: 50px;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 30px;
+}
+
+.first-block-info li {
+    list-style-type: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+
+    margin-top: 10px;
+}
+
+.first-block-info ul {
+    padding-left: 0px;
+    margin-top: 36px;
+}
+
+.first-block-pic img {
+    margin-left: 110px;
+}
+
+.second-block {
+    margin-top: 8px;
+}
+
+.second-block-pic img {
+    margin-left: 260px;
+    height: 100%;
+}
+
+.second-block-info {
+    margin-left: 120px;
+    margin-top: 40px;
+}
+
+.second-block-info ul {
+    padding-left: 0px;
+    margin-top: 46px;
+}
+
+.second-block-info li {
+    list-style-type: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+
+    margin-top: 7px;
+}
+
+.middle-cards {
+    margin-top: 100px;
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    width: 25%;
+    height: 40vh;
+    border: 0px;
+}
+
+.card img,
+.card p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.card p {
+    margin-top: 30px;
+}
+
+.under-middle {
+    margin-top: 40px;
+}
+
+.under-middle-title h1 {
+   text-align: center;
+   color: #FE8B04;
+
+   font-weight: 700;
+   font-size: 35px;
+   line-height: 43px;
+}
+
+.under-middle-pic {
+    justify-content: center;
+    display: flex;
+}
+
+.under-middle-pic img {
+    margin: 70px;
+}
+

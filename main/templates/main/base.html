@@ -1,0 +1,84 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    {% block static-files %}
+    {% endblock static-files %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+    <title>{{title}}</title>
+</head>
+<body>
+    {% block mainmenu %}
+            <div class="header-line">
+                <div class="header-logo">
+                    <img href="{% url 'home' %}" class="place-for-logo" src="{% static 'main/img/place-for-header-logo.png' %}">
+                    <a href="{% url 'home' %}"><img class="logo" src="{% static 'main/img/header-logo.png' %}"></a>
+                    <a href="{% url 'home' %}" class="logo-text">Happy Pet</a>
+                </div>
+                <div class="header-navigation">
+                    {% for el in menu %}
+                        <a class = 'navigation-item' href="{% url el.url_name %}">{{el.title}}</a>
+                    {% endfor %}
+                </div>
+                <div class="authorization">
+                  <a href="#"><img src="{% static 'main/img/login.png' %}"></a>
+                    {% if request.user.is_authenticated %}
+                    <a class="authorization-text" href="{% url 'logout_user' %}" >Log out</a>
+                    {% else %}
+                     <div>
+                        <a class="authorization-text" href="{% url 'login' %}">Login</a>
+                        <br>
+                        <a class="authorization-text" href="{% url 'register' %}">Register</a>
+                      </div>
+                    {% endif %}
+                </div>
+                <div class="header-to-buy">
+                    <img class="place-for-basket" src="{% static 'main/img/place-for-basket.png' %}">
+                    <img class="basket" src="{% static 'main/img/basket.png' %}">
+                </div>
+            </div>
+        </div>
+    {% endblock mainmenu %}
+    {% block content %}
+    {% endblock %}
+<div class="bottom">
+    <div class="bottom-info">
+        <h1>Про компанію</h1>
+        <ul>
+            <a href="{% url 'home' %}"><li>Магазини</li></a>
+            <a href="{% url 'about' %}"><li>Про нас</li></a>
+            <a href=""><li>Вакансії</li></a>
+        </ul>
+    </div>
+    <div class="bottom-info">
+        <h1>Покупцям</h1>
+        <ul>
+            <a href="{% url 'how_buy' %}"><li>Як купити</li></a>
+            <a href=""><li>Доставка і оплата</li></a>
+            <a href=""><li>Бонусна програма</li></a>
+        </ul>
+    </div>
+    <div class="bottom-contacts">
+        <h1>Контакти</h1>
+        <ul>
+            <li><img src="{% static 'main/img/bottom-contacts-phone.png' %}" style="width:20px; height20px;"> +380 95 555 5555</li>
+            <li><img src="{% static 'main/img/bottom-contacts-email.png' %}" style="width:20px; height20px;">   happy.pets@gmail.com</li>
+        </ul>
+        <div class="bottom-links">
+            <img src="{% static 'main/img/bottom-contacts-link-4.png'%}" style="width:25px; height25px;">
+            <img src="{% static 'main/img/bottom-contacts-link-3.png'%}" style="width:25px; height25px;">
+            <img src="{% static 'main/img/bottom-contacts-link-2.png'%}" style="width:25px; height25px;">
+            <img src="{% static 'main/img/bottom-contacts-link-1.png'%}" style="width:25px; height25px;">
+        </div>
+    </div>
+</div>
+</body>
+</html>

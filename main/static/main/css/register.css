@@ -1,0 +1,53 @@
+/* Form container */
+body {
+    background: #FE8B04;
+    background-image: url(../img/card-holder-bg.png);
+
+}
+
+form {
+  width: 30%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+/* Form input fields */
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e6e6e6;
+}
+
+/* Error messages */
+.form-error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}

@@ -1,0 +1,131 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block static-files %}
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+{% endblock static-files %}
+
+
+{% block content %}
+<div class="entry">
+    <div class="entry-info">
+        <div class="entry-title">
+            Твій друг з <br> доставкою додому
+        </div>
+        <div class="entry-desc">
+            Онлайн-магазин домашніх тварин - зручне <br>
+            вирішення проблеми, коли тобі лінь виходити <br> з дому.
+        </div>
+        <div class="entry-btn">
+              <form action="#form-to-choose">
+                <button type="btn" class="btn" style="width:380px; height:69px;">Обрати друга</button>
+              </form>
+        </div>
+    </div>
+    <img class="entry-pic-bg" src="{% static 'main/img/entry-pic-bg.png' %}" style="width:760px; height:613px;" >
+    <div class="entry-pic">
+        <img src="{% static 'main/img/entry-pic.png' %}" style="width:760px; height:613px;" >
+    </div>
+    <div class="for-bg"></div>
+</div>
+
+<div id="form-to-choose" class="form-to-choose">
+    <div class="choose-title">
+        А кого бажаєш ти?
+    </div>
+    <div class="card-holder">
+        <div class="main-cards">
+            <a href="{{dog.get_absolute_url}}">
+                <div class="main-card" style="width:600px; height:300px;">
+                    <img class="main-card-pics" src="{% static 'main/img/dog-for-card.png' %}" style="width:279px; height:300px;" >
+                    <h1 class="card-link-dogs">{{dog.name}}</h1>
+                </div>
+            </a>
+            <a href="{{cat.get_absolute_url}}">
+                <div class="main-card" style="width:600px; height:300px;">
+                    <img class="main-card-pics" src="{% static 'main/img/cat-for-card.png' %}" style="width:340px; height:300px;" >
+                    <h1 class="card-link-cats">{{cat.name}}</h1>
+                </div>
+            </a>
+        </div>
+        <div class="cards">
+            <a href="{{parrot.get_absolute_url}}">
+                <div class="card" style="width:230px; height:230px;">
+                    <h1 class="card-link-parrots">{{parrot.name}}</h1>
+                    <img class="card-pic-bg" src="{% static 'main/img/for-card-bg.png' %}" style="width:220px; height:240px;">
+                    <img class="card-pic-parrots" src="{% static 'main/img/parrot-for-card.png' %}" style="width:130px; height:170px;">
+                </div>
+            </a>
+            <a href="{{fish.get_absolute_url}}">
+                <div class="card" style="width:230px; height:230px;">
+                    <h1 class="card-link-fishes">{{fish.name}}</h1>
+                    <img class="card-pic-bg" src="{% static 'main/img/for-card-bg.png' %}" style="width:220px; height:240px;">
+                    <img class="card-pic-fishes" src="{% static 'main/img/fish-for-card.png' %}" style="width:190px; height:170px;">
+                </div>
+            </a>
+            <a href="{{hamster.get_absolute_url}}">
+                <div class="card" style="width:230px; height:230px;">
+                    <h1 class="card-link-hamsters">{{hamster.name}}</h1>
+                    <img class="card-pic-bg" src="{% static 'main/img/for-card-bg.png' %}" style="width:240px; height:250px;">
+                    <img class="card-pic-hamsters" src="{% static 'main/img/hamster-for-card.png' %}" style="width:210px; height:170px;">
+                </div>
+            </a>
+            <a href="{{reptile.get_absolute_url}}">
+                <div class="card" style="width:230px; height:230px;">
+                    <h1 class="card-link-reptiles">{{reptile.name}}</h1>
+                    <img class="card-pic-bg" src="{% static 'main/img/for-card-bg.png' %}" style="width:220px; height:240px;">
+                    <img class="card-pic-reptiles" src="{% static 'main/img/reptile-for-card.png' %}" style="width:190px; height:190px;">
+                </div>
+            </a>
+            <a href="{{spider.get_absolute_url}}">
+                <div class="card" style="width:230px; height:230px;">
+                    <h1 class="card-link-spiders">{{spider.name}}</h1>
+                    <img class="card-pic-bg" src="{% static 'main/img/for-card-bg.png' %}" style="width:220px; height:240px;">
+                    <img class="card-pic-spiders" src="{% static 'main/img/spider-for-card.png' %}" style="width:195px; height:190px;">
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="middle">
+    <div class="middle-info">
+        <div class="middle-title">
+            Чому обирають <br> зоомагазин «Happy Pet»?
+        </div>
+        <div class="middle-desc">
+            Найбільша мережа зоомагазинів та інтернет-магазин з <br>
+            доставкою по всій Україні. На сайті  представлений <br>
+            широкий вибір зоотоварів, акції та бонуси, а також сервіси <br>
+            з підбору кормів та корисні статті про свійських тварин.
+        </div>
+    </div>
+        <img class="middle-pic-bg" src="{% static 'main/img/for-card-bg.png' %}" style="width:800px; height:300px;">
+        <img class="middle-pic" src="{% static 'main/img/middle-pic.png' %}" style="width:870px; height:440px;">
+</div>
+
+<div class="under-middle">
+    <div class="info-card">
+        <img src="{% static 'main/img/info-card-1.png' %}">
+        <p>Найбільша мережа <br> зоомагазинів</p>
+    </div>
+    <div class="info-card">
+        <img src="{% static 'main/img/info-card-2.png' %}">
+        <p>Самовивіз <br> замовлення</p>
+    </div>
+    <div class="info-card">
+        <img src="{% static 'main/img/info-card-3.png' %}">
+        <p>Власна кур'єрська <br>служба</p>
+    </div>
+    <div class="info-card">
+        <img src="{% static 'main/img/info-card-4.png' %}">
+        <p>Турбота про кожного<br> вихованця</p>
+    </div>
+    <div class="info-card">
+        <img src="{% static 'main/img/info-card-5.png' %}">
+        <p>Вигідна бонусна<br> програма</p>
+    </div>
+</div>
+{% endblock content %}
