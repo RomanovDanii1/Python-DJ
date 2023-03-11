@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block static-files %}
-    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/category.css' %}">
 {% endblock static-files %}
 
@@ -25,19 +24,23 @@
     </div>
     <div class="card-holder">
       {% for el in posts %}
-        <div class="card">
-          <img src="{{el.photo.url}}" alt="{{el.breed}}" />
-          <div class="card-details">
-            <a href="{{el.get_absolute_url}}" class="breed">{{el.breed}}</a>
-            <p class="price">{{el.price}} UAH</p>
-            <button type="button">Add to Cart</button>
-          </div>
-        </div>
+            <div class="card">
+                <form method="post" action="{% url 'add_item_to_cart' el.slug %}">
+                    {% csrf_token %}
+                    <img src="{{el.photo.url}}" alt="{{el.breed}}" />
+                  <div class="card-details">
+                    <a href="{{el.get_absolute_url}}" class="breed">{{el.breed}}</a>
+                    <p class="price">{{el.price}} UAH</p>
+<!--                      <label class="form-label" for="id_quantity">Quantity</label>-->
+<!--                      <input type="number" name="quantity" value="1" min="1"-->
+<!--                      required id = "id_quantity"/>-->
+                    <button type="submit">Add to Cart</button>
+                  </div>
+                </form>
+            </div>
         {% if forloop.counter|divisibleby:"4" %}
-          <div class="clear"></div>
         {% endif %}
       {% endfor %}
     </div>
-
 </div>
 {% endblock content %}

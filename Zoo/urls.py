@@ -9,6 +9,8 @@ from main.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+    path('cart/', include('cart.urls')),
+    path('profile/', include('profile.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

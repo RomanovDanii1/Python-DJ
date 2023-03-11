@@ -6,6 +6,7 @@ menu = [{'title': "Main page", 'url_name': 'home'},
         ]
 
 
+
 class DataMixin:
     def get_user_context(self, *, object_list=None, **kwargs):
         context = kwargs

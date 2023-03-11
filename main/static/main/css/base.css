@@ -51,7 +51,7 @@ body {
 }
 
 .header-navigation {
-    margin-left: 150px;
+    margin-left: 120px;
 }
 
 .navigation-item,
@@ -70,7 +70,7 @@ body {
 .navigation-item {
     font-size: 20px;
     font-weight: 400;
-    margin-right: 49px;
+    margin-right: 39px;
 
     transition: all .6s ease;
 }
@@ -88,6 +88,7 @@ body {
 }
 
 .authorization-text {
+  text-align: center;
   margin-left: 20px;
   transition: all .6s ease;
   font-size: 20px;
@@ -113,7 +114,7 @@ body {
 
 
 .header-to-buy {
-    margin-left: 80px;
+     margin-left: 80px;
 }
 
 .place-for-basket {
@@ -133,6 +134,7 @@ body {
 }
 
 .bottom {
+    width: 100%;
     display: flex;
     background: #FE8B04;
     padding-left: 130px;

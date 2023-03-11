@@ -5,7 +5,7 @@ from django.urls import reverse
 class Pet(models.Model):
     breed = models.CharField(max_length=100)
     slug = models.SlugField(max_length=255, unique=True, db_index=True)
-    price = models.FloatField(null=True)
+    price = models.DecimalField(default=True, max_digits=10, decimal_places=2)
     content = models.TextField(blank=True)
     photo = models.ImageField(upload_to="photos/%Y/%m/%d/")
     time_create = models.DateTimeField(auto_now_add=True)

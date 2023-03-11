@@ -55,6 +55,7 @@
   height: 240px;
   display: block;
   margin: 0 auto;
+  object-fit: contain;
 }
 
 .card-details {
