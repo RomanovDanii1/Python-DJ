@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block static-files %}
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'profile/css/main.css' %}">
+{% endblock static-files %}
+
+{% block content %}
+    <div class="profile-main">
+        {% include 'profile/navigator.html' %}
+        <div class="user-info">
+            <h1>User Information</h1>
+            <p>Username: {{ user.username }}</p>
+            <p>Email: {{ user.email }}</p>
+        </div>
+    </div>
+{% endblock content %}

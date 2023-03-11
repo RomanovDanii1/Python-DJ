@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block static-files %}
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'profile/css/orders.css' %}">
+{% endblock static-files %}
+
+{% block content %}
+<div class="profile-main">
+{% include 'profile/navigator.html' %}
+    <div class="container">
+        <h1>Your orders</h1>
+        <table class="orders-table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Price</th>
+                <th>Data</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for order in orders %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ order.amount }}</td>
+                    <td>{{ order.creation_time}}</td>
+                    <td>{{ order.status}}</td>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% load static %}
+
+{% block static-files %}
+    <link rel="stylesheet" href="{% static 'profile/css/profile-navigation.css' %}">
+{% endblock static-files %}
+
+<div class="profile-main">
+    <div class="profile-navigation">
+        <a href="{% url 'information' %}">Information</a><br>
+        <a href="{% url 'edit' %}">Change information</a> <br>
+        <a href="{% url 'change_password' %}">Change password</a> <br>
+        <a href="{% url 'orders' %}">Orders</a> <br>
+    </div>
+</div>
+

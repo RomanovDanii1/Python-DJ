@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block static-files %}
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'cart/css/index.css' %}">
+{% endblock static-files %}
+
+{% block content %}
+{% if items %}
+    <div class="container">
+        <h1>Customer Cart</h1>
+        <table class="cart-table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th>Action</th>
+                <th>Breed</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in items %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>
+                        <img src="{{ item.photo.url }}" alt="">
+                    </td>
+                    <td>{{ item.product }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.amount }}</td>
+                    <td><form method="post" action="{% url 'cart_delete_item' item.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="delete-button">DELETE</button>
+                    </form></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="cart-total">
+            <span>Total: {{cart.amount}} UAH</span>
+        </div>
+        <div class="cart-checkout">
+            <a href="{% url 'make_order' %}"><button>Pay</button></a>
+        </div>
+    </div>
+{% else %}
+    <div class="container">
+        <h1 class="empty-cart">Empty</h1>
+    </div>
+
+{% endif %}
+{% endblock content %}
+
