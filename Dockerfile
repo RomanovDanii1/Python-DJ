@@ -1,10 +1,8 @@
-FROM python
-
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
-WORKDIR /app
-COPY requirements.txt /app/
+FROM python:latest
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+WORKDIR /code
+COPY requirements.txt /code/
 RUN pip install -r requirements.txt
-COPY . /app/
-
+RUN apt-get update && apt-get install -y postgresql-client
+COPY . /code/

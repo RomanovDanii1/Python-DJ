@@ -16,6 +16,11 @@ class PetList(generics.ListAPIView):
         return queryset
 
 
+class UserList(generics.ListAPIView):
+    serializer_class = UserSerializer
+    queryset = User.objects.all()
+
+
 class PetDetails(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PetSerializer
     queryset = Pet.objects.all()
@@ -29,18 +34,6 @@ class CategoryList(generics.ListCreateAPIView):
 class CategoryDetails(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CategorySerializer
     queryset = Category.objects.all()
-
-
-class EditProfileList(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = EditProfileSerializer
-
-    def get_queryset(self):
-        queryset = User.objects.all()
-
-        payment = self.request.query_params.get('Payment')
-        if payment is not None:
-            queryset = queryset.filter(UserPayment=Payment)
-        return queryset
 
 
 class PaymentList(generics.ListAPIView):

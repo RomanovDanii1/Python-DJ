@@ -32,7 +32,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'profile.apps.ProfileConfig',
     'api.apps.ApiConfig',
     'rest_framework',
+    'data',
 ]
 
 MIDDLEWARE = [
@@ -87,10 +88,15 @@ WSGI_APPLICATION = 'Zoo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ZooData',  # Имя базы данных
+        'USER': 'postgres',  # Имя пользователя
+        'PASSWORD': 'Marina',  # Пароль пользователя
+        'HOST': 'localhost',  # Имя сервиса контейнера базы данных из docker-compose.yml
+        'PORT': '5432',  # Порт базы данных PostgreSQL
     }
 }
+
 
 
 # Password validation

@@ -13,12 +13,10 @@ class CategorySerializer(serializers.ModelSerializer):
         model = Category
         fields = ('__all__')
 
-
-class EditProfileSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = EditProfileForm
+        model = User
         fields = ('__all__')
-
 
 class PaymentSerializer(serializers.ModelSerializer):
     class Meta:

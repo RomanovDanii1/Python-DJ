@@ -1,23 +1,28 @@
-version: "3.7"
+version: '3.9'
 services:
   db:
     image: postgres
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=ZooData
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-  web:
+      - POSTGRES_PASSWORD=Marina
+    restart: always
+    container_name: postgres_db
+  app:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    restart: always
+    image: my_app:latest
+    command: sh -c "sleep 10 && python manage.py runserver 0.0.0.0:8000"
+    container_name: django
+    environment:
+      - POSTGRES_NAME=ZooData
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Marina
     volumes:
       - .:/code
     ports:
       - "8000:8000"
-    environment:
-      - POSTGRES_NAME=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
     depends_on:
       - db
